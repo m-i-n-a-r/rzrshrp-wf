@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', serif;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111111;
+    color: white;
+  }
+
+  a {
+    color: #81D4FA !important;
+  }
+
+  .container {
+    background: #222222 !important;
+    color: white;
+  }
+  
+  .faqs h3 {
+    color: white;
+  }
+
+  .faqs > li > a {
+    color: white;
+  }
+
+  .faqs > li > a > img {
+    filter: invert(100%);
+  }
+}
+
+a {
+   color: #1976D2;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding-top: 18px;
+  background: transparent;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+.app-logo {
+  width: 96px;
+  height: 96px;
+}
+
+.container {
+  max-width: 800px;
+  padding: 18px;
+  margin: calc(1.8em) auto 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+.faqs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faqs li {
+  margin-bottom: 16px;
+}
+
+.faqs li a[href] * {
+  vertical-align: middle;
+}
+
+.faqs h3 {
+  display: inline;
+  margin-left: 6px;
+  font-weight: normal;
+}
+
+.faqs a[name] {
+  display: block;
+  margin-top: -25vh;
+  height: 25vh;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.faqs li img {
+  transform: rotate(-90deg);
+}
+
+.faqs li p {
+  display: none;
+}
+
+.faqs li.active img {
+  transform: none;
+}
+
+.faqs li.active p {
+  display: block;
+}
+
+.faqs li.active h3 {
+  font-weight: bold;
+}
+
+.faqs > li > a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
