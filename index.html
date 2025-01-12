@@ -1,56 +1,208 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Rzrshrp WF</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-  </head>
-  <body>
-    <!-- Title -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Rzrshrp WF</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body id="background">
+  <!-- Title -->
+  <div>
     <header>
+      <br>
       <img class="app-logo" src="res/logo.png" alt="Rzrshrp logo">
       <h1>Rzrshrp Design Watch Faces</h1>
+      <a>rzrshrpstudio@gmail.com</a>
+      <br>
     </header>
-    <!-- Introduction -->
-    <div class="container">
-        <h2>Introduction</h2>
+  </div>
+  <!-- Introduction -->
+  <div class="container">
+    <h2>Introduction</h2>
+    <p>
+      This little site should cover almost any possible question regarding my watch faces.
+      Please read it carefully and make sure you didn't find the answer to your question before emailing me.
+      The more redundant emails I receive, the more I'm slow to reply, sadly :) Also, feel free to propose updates and
+      edits.
+      I put it on GitHub for a reason.
+      <br><br>
+      A one star review won't make me reply faster and won't motivate me. Instead, it destroys the reputation
+      of my apps and makes them harder to discover in the store. So please, don't leave bad reviews for no reason.
+      Instead, take a minute to leave a positive review. 30 seconds of your life can improve mine a lot!
+      I'm a single person and this is my second job, I have a family and I do my best to help, so please be kind!
+    </p>
+  </div>
+  <!-- Supported devices -->
+  <div class="container">
+    <h2>Compatibility</h2>
+    <p>
+      All of my watch faces are available on WearOS 3+ devices. This means that they won't run on Tizen and other OSes,
+      they won't run on weird chinese smartwatches from Amazon or Aliexpress, they won't run on your smartphone or on a
+      smartband and so on. A complete list of compatible models would be too long, but to summarize:
+    <ul>
+      <li>Any Samsung Watch from the Watch 4</li>
+      <li>Any Mobvoi Ticwatch</li>
+      <li>Latest Fossil smartwatches</li>
+      <li>Oneplus watch</li>
+      <li>Some Oppo and Xiaomi models</li>
+    </ul>
+    If you can't find your watch in this list, just Google "[your smartwatch name] WearOS" and voilà, you should
+    find if it runs WearOS or not. Another simple test is: does the smartwatch have the Play Store app? Nice, you have
+    WearOS. And you can find my watch faces directly from the watch, if you prefer!
+    </p>
+  </div>
+  <!-- Install instructions -->
+  <div class="container">
+    <h2>Install instructions</h2>
+    <p>
+      They are quite straightforward, but if it's the first time you install a custom watch face, you could miss a
+      couple steps:
+    <ul>
+      <li>Install the companion app on your smartphone</li>
+      <li>Connect your watch</li>
+      <li>Tap the button in the companion app</li>
+      <li>Check the watch (make sure you're using the same Google account used on the smartphone to purchase the watch
+        face, or you'll have to pay twice!)</li>
+      <li>install the app in the watch</li>
+      <li>Long press on your current watch face</li>
+      <li>Swipe until you see a "+" button</li>
+      <li>Look for the new watch face, tap on it</li>
+      <li>Done, you should see the new watch face</li>
+    </ul>
+    Another possible approach is to search for the watch face and buy it directly on the watch. It's the same, just a
+    bit cumbersome.
+    </p>
+  </div>
+  <!-- FAQ -->
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faqs">
+      <!-- Support more watches -->
+      <li>
+        <a name="support-watch"></a>
+        <a href="#support-watch">
+          <img src="res/arrow.svg">
+          <h3>Support the [insert non wearOS model] smartwatch!</h3>
+        </a>
         <p>
-          This FAQ should cover almost any possible question regarding my watch faces, feature requests excluded. 
-          Please read it carefully and make sure you didn't find the answer to your question before emailing me. 
-          The more redundant emails I receive, the more I'm slow to reply, sadly :) Also, feel free to propose updated and edits.
-          I put it on GitHub for a reason.
+          Short answer: no. Long answer: my watch faces are programmed, crafted and designed exclusively for WearOS.
+          Porting them to another OS is mostly impossible. BUT, if you want to do so, I can share my assets with you
+          and we could cooperate.
         </p>
-    </div>
-    <!-- About reviews -->
-    <div class="container">
-        <h2>About reviews</h2>
-    </div>
-    <!-- Supported devices -->
-    <div class="container">
-        <h2>Compatibility</h2>
-    </div>
-    <!-- FAQ -->
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <ul class="faqs">
-        <li>
-          <a name="support-watch"></a>
-          <a href="#support-watch">
-            <img src="res/arrow.svg">
-            <h3>Support the [insert non wearOS model] smartwatch!</h3>
-          </a>
-          <p>
-            Short answer: no. Long answer: my watch faces are programmed, crafted and designed exclusively for WearOS. 
-            Porting them to another OS is mostly impossible. BUT, if you want to do so, I can share my assets with you
-            and we could cooperate.
-          </p>
-        </li>
-      </ul>
-    </div>
+      </li>
+      <!-- Can't install -->
+      <li>
+        <a name="cant-install"></a>
+        <a href="#cant-install">
+          <img src="res/arrow.svg">
+          <h3>I can't install the watch face on my old WearOS smartwatch!</h3>
+        </a>
+        <p>
+          As I wrote above, most of the watch faces are designed for WearOS 3 and above, so if you still have an old
+          WearOS 2 smartwatch, it sucks but I can't support it, you need a newer model to enjoy my watch faces :(
+        </p>
+      </li>
+      <!-- Can't customize from phone -->
+      <li>
+        <a name="cant-customize"></a>
+        <a href="#cant-customize">
+          <img src="res/arrow.svg">
+          <h3>I can't customize the watch face through my phone, it loads forever or crashes the app!</h3>
+        </a>
+        <p>
+          The inability to customize pretty complex watch faces on the phone is a known bug on Samsung's side, they know
+          that but still they didn't fix it. A workaround until then is to customize the watch face through the watch
+          itself, just long press on it and tap on the customize button! On my side, I have 2 options: remove a lot of
+          customizable elements, or deal with this problem.
+        </p>
+      </li>
+      <!-- Have to pay again -->
+      <li>
+        <a name="pay-again"></a>
+        <a href="#pay-again">
+          <img src="res/arrow.svg">
+          <h3>I installed the companion app on my smartphone, but I have to pay again to install it on the watch</h3>
+        </a>
+        <p>
+          My guess is that you bought the watch face using a Google account which is not the one you entered in the
+          smartwatch. This may happen if you have more than one account, and the solution is to switch to the correct
+          account. Another way is to buy the watchface on the watch and refund it on the phone connected with the other
+          account.
+        </p>
+      </li>
+      <!-- Data displayed incorrectly -->
+      <li>
+        <a name="incorrect-data"></a>
+        <a href="#incorrect-data">
+          <img src="res/arrow.svg">
+          <h3>The HR/step goal/anything else isn't displayed correctly</h3>
+        </a>
+        <p>
+          You can easily fix this by selecting another watch face and setting mine again, or checking the watch face
+          permissions. If the issue persists, send me an email.
+        </p>
+      </li>
+      <!-- Data displayed incorrectly -->
+      <li>
+        <a name="feature-request"></a>
+        <a href="#feature-request">
+          <img src="res/arrow.svg">
+          <h3>I want to request a feature!</h3>
+        </a>
+        <p>
+          Go ahead but please keep in mind that I have a lot of watch faces to maintain and very limited free time, so
+          please be patient. Also, please note that there are thing that simply aren't possible.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!-- Watch face specific questions -->
+  <div class="container">
+    <h2>Watch Face specific questions</h2>
+    <p>
+      Many frequently asked questions are about a specific watch face, so in this section I'll add detailed information
+      on the watch faces, if needed
+    </p>
+    <ul class="faqs">
+      <!-- Data displayed incorrectly -->
+      <li>
+        <a name="planet-stars"></a>
+        <a href="#planet-stars">
+          <img src="res/arrow.svg">
+          <h3>Planet in Stars</h3>
+        </a>
+        <p>
+          Those are the main questions i receive
+        </p>
+      </li>
+    </ul>
+  </div>
+  <br><br><br>
 
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: '#background', // element selector string or DOM object reference
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x31810,
+      waveHeight: 40.00,
+      waveSpeed: 0.55,
+      zoom: 0.75
+    })
+  </script>
+</body>
+
 </html>
