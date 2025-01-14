@@ -12,22 +12,31 @@
 
 <body id="background">
   <!-- Title -->
-  <div>
-    <header>
-      <br>
-      <img class="app-logo" src="res/logo.png" alt="Rzrshrp logo">
-      <h1>Rzrshrp Design Watch Faces</h1>
-      <a>rzrshrpstudio@gmail.com</a>
-      <br>
-    </header>
-  </div>
+  <header>
+    <br>
+    <img class="app-logo" src="res/logo.png" alt="Rzrshrp logo">
+    <h1>Rzrshrp Design Watch Faces</h1>
+    <ul class="links">
+      <li class="icon">
+        <span class="tooltip">Email me</span>
+        <span><img src="res/email.svg" class="icon-image"></img></span>
+      </li>
+      <li class="icon">
+        <span class="tooltip">Other Watch Face</span>
+        <span><img src="res/watch.svg" class="icon-image"></img></span>
+      </li>
+    </ul>
+    <br>
+  </header>
   <!-- Introduction -->
   <div class="container">
     <h2>Introduction</h2>
     <p>
       This little site should cover almost any possible question regarding my watch faces.
       Please read it carefully and make sure you didn't find the answer to your question before emailing me.
-      The more redundant emails I receive, the more I'm slow to reply, sadly :) Also, feel free to propose updates and
+      The more redundant emails I receive, the more I'm slow to reply, sadly :) 
+      <br>
+      Also, feel free to propose updates and
       edits.
       I put it on GitHub for a reason.
       <br><br>
@@ -159,6 +168,19 @@
           please be patient. Also, please note that there are thing that simply aren't possible.
         </p>
       </li>
+      <!-- Measuring units -->
+      <li>
+        <a name="measuring-units"></a>
+        <a href="#measuring-units">
+          <img src="res/arrow.svg">
+          <h3>How do I choose the measuring units?</h3>
+        </a>
+        <p>
+          The measuging units are chosen automatically and are not manually selectable (at the moment, this may change
+          in the future). The date format and the temperature unit depend on the location, the 12/24 hours format and
+          the distance unit from the language. This may change across watch faces.
+        </p>
+      </li>
     </ul>
   </div>
   <!-- Watch face specific questions -->
@@ -166,10 +188,10 @@
     <h2>Watch Face specific questions</h2>
     <p>
       Many frequently asked questions are about a specific watch face, so in this section I'll add detailed information
-      on the watch faces, if needed
+      on the watch faces, if needed. If you don't see a watch face here, probably it's pretty self explanatory!
     </p>
     <ul class="faqs">
-      <!-- Data displayed incorrectly -->
+      <!-- Planet in stars -->
       <li>
         <a name="planet-stars"></a>
         <a href="#planet-stars">
@@ -177,7 +199,38 @@
           <h3>Planet in Stars</h3>
         </a>
         <p>
-          Those are the main questions i receive
+          <b>Q</b> - What is the circular bar and what does STP and ACC mean?
+          <br>
+          <b>A</b> - STP is the step count, if you have a step goal of, say 10k steps, the bar is full when you have 0
+          steps
+          and empty when you have 10k or more steps.
+          ACC means acceleration, you will see a bar appear when the watch is shaking or accelerating (for example, when
+          you swing your arm).
+          <br><br>
+          <b>Q</b> - Is the compass actually a compass? Can I disable it?
+          <br>
+          <b>A</b> - No. The compass is a level on the x axis, and I had to do this because there's no way to access the
+          compass data itself for third party watch faces, as far as I know. You can disable it by customizing the Watch
+          Face and removing the compass ring.
+          <br><br>
+          <b>Q</b> - Can I use the bar to display other data, like the battery level for example?
+          <br>
+          <b>A</b> - No, and I'm not sure if this will ever be possible, for technical limitations. Sorry.
+          <br><br>
+        </p>
+      </li>
+      <!-- Programmer -->
+      <li>
+        <a name="programmer"></a>
+        <a href="#programmer">
+          <img src="res/arrow.svg">
+          <h3>Programmer</h3>
+        </a>
+        <p>
+          <b>Q</b> - Can I increase the font size or choose the data I want to display?
+          <br>
+          <b>A</b> - No, the layout is fixed. There's an option to make the time bigger and readable though!
+          <br><br>
         </p>
       </li>
     </ul>
@@ -189,14 +242,14 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
   <script>
     VANTA.WAVES({
-      el: '#background', // element selector string or DOM object reference
+      el: '#background',
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
+      scale: 0.70,
+      scaleMobile: 0.70,
       color: 0x31810,
       waveHeight: 40.00,
       waveSpeed: 0.55,

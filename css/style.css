@@ -18,22 +18,22 @@ body {
     background: #222222d0 !important;
     color: white;
   }
-  
+
   .faqs h3 {
     color: white;
   }
 
-  .faqs > li > a {
+  .faqs>li>a {
     color: white;
   }
 
-  .faqs > li > a > img {
+  .faqs>li>a>img {
     filter: invert(100%);
   }
 }
 
 a {
-   color: #2fc186;
+  color: #2fc186;
 }
 
 header {
@@ -45,7 +45,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: -1;
 }
 
 h1 {
@@ -58,11 +57,11 @@ h1 {
 }
 
 .container {
-  max-width: 800px;
-  padding: 18px;
+  max-width: min(800px, calc(100% - 56px));
+  padding: 16px;
   margin: calc(1.8em) auto 0 auto;
   border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background: white;
 }
 
@@ -101,7 +100,8 @@ h2 {
 }
 
 .faqs li img {
-  transform: rotate(-90deg);
+  transform: none;
+  max-width: 24px;
 }
 
 .faqs li p {
@@ -109,7 +109,7 @@ h2 {
 }
 
 .faqs li.active img {
-  transform: none;
+  transform: rotate(90deg);
 }
 
 .faqs li.active p {
@@ -120,8 +120,80 @@ h2 {
   font-weight: bold;
 }
 
-.faqs > li > a {
+.faqs>li>a {
   color: black;
   text-decoration: none;
   outline: none;
+}
+
+.links {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.links .icon {
+  position: relative;
+  background: #222222d0;
+  border-radius: 50%;
+  padding: 12px;
+  margin: 10px;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-image {
+  filter: invert(100%);
+  width: 40px;
+  height: 40px;
+  transform: none;
+}
+
+.links .tooltip {
+  position: absolute;
+  top: 0;
+  width: max-content;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 3px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.links .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.links .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.links .icon:hover {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  background: #2fc186;
 }

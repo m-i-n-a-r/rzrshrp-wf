@@ -6,7 +6,8 @@ function updateHash() {
 
     // Find anchor tag
     document.querySelectorAll('.faqs > li > a[name]').forEach(anchor => {
-        if (anchor.getAttribute('name') === hash)
+        if (anchor.getAttribute('name') === hash &&
+            !anchor.parentElement.classList.contains('active'))
             anchor.parentElement.classList.add('active');
         else
             anchor.parentElement.classList.remove('active');
