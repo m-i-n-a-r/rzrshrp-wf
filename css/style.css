@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Open Sans', serif;
+  margin: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +50,7 @@ header {
 
 h1 {
   font-size: 1.8em;
+  text-align: center;
 }
 
 .app-logo {
@@ -104,7 +106,7 @@ h2 {
   max-width: 24px;
 }
 
-.faqs li p {
+.faqs li div {
   display: none;
 }
 
@@ -112,7 +114,7 @@ h2 {
   transform: rotate(90deg);
 }
 
-.faqs li.active p {
+.faqs li.active div {
   display: block;
 }
 
