@@ -5,6 +5,34 @@ body {
   margin: 0px;
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: #2fc186 !important;
+  }
+
+  .container {
+    background: white;
+    color: black;
+  }
+
+  .faqs h3 {
+    color: black;
+  }
+
+  .faqs>li>a {
+    color: black;
+  }
+
+  .faqs>li>a>img {
+    filter: invert(0%);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #111111;

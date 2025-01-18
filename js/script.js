@@ -4,7 +4,7 @@ function updateHash() {
         return;
     hash = hash.substring(1);
 
-    // Find anchor tag
+    // Find anchor tag TODO close on second click
     document.querySelectorAll('.faqs > li > a[name]').forEach(anchor => {
         if (anchor.getAttribute('name') === hash &&
             !anchor.parentElement.classList.contains('active'))
