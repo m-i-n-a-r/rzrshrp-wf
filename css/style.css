@@ -72,6 +72,21 @@ a {
   height: 100%;
 }
 
+.bonus-text {
+  color:#17af9d;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: .3;
+  }
+}
+
+.horizontal-divider {
+  opacity: .1;
+}
+
 header {
   width: 100%;
   display: flex;
