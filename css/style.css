@@ -77,6 +77,11 @@ a {
   animation: blinker 2s linear infinite;
 }
 
+.bonus-text-variant {
+  color:#b7ff00;
+  animation: blinker 3s linear infinite;
+}
+
 @keyframes blinker {
   50% {
     opacity: .3;
