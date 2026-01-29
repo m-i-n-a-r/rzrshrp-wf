@@ -289,3 +289,30 @@ h2 {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
   background: #2fc186;
 }
+
+.statistics-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.statistics-table th,
+.statistics-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.statistics-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.statistics-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.statistics-table td {
+  font-size: 1.1em;
+  color: #555;
+}
