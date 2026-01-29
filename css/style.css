@@ -1,8 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@font-face {
+  font-family: 'IosevkaFixedSS10';
+  src: url('../fonts/IosevkaFixedSS10-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'IosevkaFixedSS10';
+  src: url('../fonts/IosevkaFixedSS10-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'IosevkaFixedSS10';
+  src: url('../fonts/IosevkaFixedSS10-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
 
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'IosevkaFixedSS10', monospace;
+  font-weight: 300;
   margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
 }
 
 @media (prefers-color-scheme: light) {
@@ -73,12 +103,12 @@ a {
 }
 
 .bonus-text {
-  color:#17af9d;
+  color: #17af9d;
   animation: blinker 2s linear infinite;
 }
 
 .bonus-text-variant {
-  color:#b7ff00;
+  color: #b7ff00;
   animation: blinker 3s linear infinite;
 }
 
