@@ -31,8 +31,9 @@ h6 {
   font-weight: 700;
 }
 
-h1 {
-  font-weight: 700;
+.section-title {
+  text-align: center !important;
+  color: #2fc186 !important;
 }
 
 @media (prefers-color-scheme: light) {
@@ -104,17 +105,25 @@ a {
 
 .bonus-text {
   color: #17af9d;
-  animation: blinker 2s linear infinite;
+  animation: glow 2s ease-in-out infinite;
 }
 
 .bonus-text-variant {
-  color: #b7ff00;
-  animation: blinker 3s linear infinite;
+  color: #00d4aa;
+  animation: glow 3s ease-in-out infinite;
 }
 
-@keyframes blinker {
+@keyframes glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(23, 175, 157, 0.5), 0 0 10px rgba(23, 175, 157, 0.2);
+    opacity: 1;
+  }
+
   50% {
-    opacity: .3;
+    text-shadow: 0 0 15px rgba(23, 175, 157, 0.8), 0 0 25px rgba(23, 175, 157, 0.4);
+    opacity: 0.95;
   }
 }
 
@@ -136,11 +145,59 @@ header {
 h1 {
   font-size: 1.8em;
   text-align: center;
+  animation: titleGlow 2s ease-in-out infinite;
 }
 
 .app-logo {
   width: 96px;
   height: 96px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.app-logo.animate {
+  animation: logoPulse 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(23, 175, 157, 0.5)) drop-shadow(0 0 10px rgba(23, 175, 157, 0.2));
+  }
+
+  25% {
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 15px rgba(23, 175, 157, 0.8)) drop-shadow(0 0 25px rgba(23, 175, 157, 0.4));
+  }
+
+  50% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(23, 175, 157, 0.5)) drop-shadow(0 0 10px rgba(23, 175, 157, 0.2));
+  }
+
+  75% {
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 15px rgba(23, 175, 157, 0.8)) drop-shadow(0 0 25px rgba(23, 175, 157, 0.4));
+  }
+}
+
+@keyframes titleGlow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(47, 193, 134, 0.4), 0 0 20px rgba(47, 193, 134, 0.2);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(47, 193, 134, 0.8), 0 0 40px rgba(47, 193, 134, 0.4);
+  }
+}
+
+.container>p>h3 {
+  text-align: center;
+  color: #2fc186;
 }
 
 .bottom-line {
@@ -157,9 +214,72 @@ h1 {
   background: white;
 }
 
+.container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+.container>p>ul {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.features-list {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.container>p>ul li,
+.features-list li {
+  padding: 16px 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(47, 193, 134, 0.15);
+  font-size: 1em;
+  color: #333;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
+}
+
+.container>p>ul li:last-child,
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.container>p>ul li:hover,
+.features-list li:hover {
+  background-color: rgba(47, 193, 134, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .container>p>ul,
+  .features-list {
+    background: #1a1a1a;
+  }
+
+  .container>p>ul li,
+  .features-list li {
+    color: #e0e0e0;
+    border-bottom-color: rgba(47, 193, 134, 0.2);
+  }
+
+  .container>p>ul li:hover,
+  .features-list li:hover {
+    background-color: rgba(47, 193, 134, 0.15);
+  }
+}
+
 h2 {
   text-align: center;
   color: #2fc186;
+  animation: titleGlow 2s ease-in-out infinite;
 }
 
 .faqs {
@@ -194,18 +314,51 @@ h2 {
 .faqs li img {
   transform: none;
   max-width: 24px;
-}
-
-.faqs li div {
-  display: none;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .faqs li.active img {
   transform: rotate(90deg);
 }
 
+.faqs li div {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
 .faqs li.active div {
   display: block;
+  animation: slideDown 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  margin-top: 12px;
+}
+
+.faqs li.active div>* {
+  animation: fadeIn 0.4s ease-in-out 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .faqs li.active h3 {
@@ -240,6 +393,36 @@ h2 {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: buttonPulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(47, 193, 134, 0.3));
+}
+
+.links .icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.links .icon:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.links .icon:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.links .icon:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+@keyframes buttonPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(47, 193, 134, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(47, 193, 134, 0);
+  }
 }
 
 .icon-image {
@@ -293,26 +476,53 @@ h2 {
 .statistics-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .statistics-table th,
 .statistics-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  padding: 16px 12px;
   text-align: center;
+  border: none;
 }
 
 .statistics-table th {
-  background-color: #f2f2f2;
-  color: #333;
+  background: linear-gradient(135deg, #2fc186 0%, #17af9d 100%);
+  color: white;
+  font-weight: 600;
 }
 
 .statistics-table tr:hover {
-  background-color: #f1f1f1;
+  background-color: rgba(47, 193, 134, 0.1);
+}
+
+.statistics-table tbody tr {
+  background-color: #f9f9f9;
 }
 
 .statistics-table td {
   font-size: 1.1em;
-  color: #555;
+  color: #2fc186;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .statistics-table tbody tr {
+    background-color: #1a1a1a;
+  }
+
+  .statistics-table th {
+    background: linear-gradient(135deg, #2fc186 0%, #17af9d 100%);
+  }
+
+  .statistics-table td {
+    color: #81D4FA;
+  }
+
+  .statistics-table tr:hover {
+    background-color: rgba(47, 193, 134, 0.15);
+  }
 }
